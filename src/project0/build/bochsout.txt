@@ -30,13 +30,13 @@
 00000000000i[     ]   SB16 support: no
 00000000000i[     ]   USB support: no
 00000000000i[     ]   VGA extension support: vbe 
-00000000000i[MEM0 ] allocated memory at 0xb517d008. after alignment, vector=0xb517e000
+00000000000i[MEM0 ] allocated memory at 0xb5134008. after alignment, vector=0xb5135000
 00000000000i[MEM0 ] 32.00MB
 00000000000i[MEM0 ] mem block size = 0x00100000, blocks=32
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/home/beta/Downloads/bochs-2.6/bios/BIOS-bochs-latest')
 00000000000i[     ] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS ] Using local time for initial clock
-00000000000i[CMOS ] Setting initial clock to: Fri Jun  8 22:41:23 2018 (time0=1528522883)
+00000000000i[CMOS ] Setting initial clock to: Fri Jun  8 23:23:02 2018 (time0=1528525382)
 00000000000i[     ] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[     ] init_dev of 'pic' plugin device by virtual method
@@ -135,27 +135,27 @@
 00000800003i[XGUI ] charmap update. Font Height is 16
 00013162150i[BIOS ] Booting from 0000:7c00
 00017757951i[MEM0 ] allocate_block: block=0x1 used 0x2 of 0x20
-00170019263i[MEM0 ] allocate_block: block=0x2 used 0x3 of 0x20
-00413604000i[     ] cpu loop quit, shutting down simulator
-00413604000i[CPU0 ] CPU is in protected mode (active)
-00413604000i[CPU0 ] CS.mode = 32 bit
-00413604000i[CPU0 ] SS.mode = 32 bit
-00413604000i[CPU0 ] EFER   = 0x00000000
-00413604000i[CPU0 ] | EAX=00000000  EBX=00000066  ECX=00000000  EDX=000003d4
-00413604000i[CPU0 ] | ESP=00101fe4  EBP=00000000  ESI=000e0200  EDI=00000200
-00413604000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df IF tf sf zf af PF cf
-00413604000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
-00413604000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00413604000i[CPU0 ] | EIP=000155c2 (000155c2)
-00413604000i[CPU0 ] | CR0=0x60000011 CR2=0x00000000
-00413604000i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
-00413604000i[CPU0 ] 0x000155c2>> jmp .-2 (0x000155c2) : EBFE
-00413604000i[CMOS ] Last time is 1528522986 (Fri Jun  8 22:43:06 2018)
-00413604000i[XGUI ] Exit
-00413604000i[     ] restoring default signal behavior
-00413604000i[CTRL ] quit_sim called with exit code 1
+00170019247i[MEM0 ] allocate_block: block=0x2 used 0x3 of 0x20
+01251432000p[XGUI ] >>PANIC<< POWER button turned off.
+01251432000i[CPU0 ] CPU is in protected mode (active)
+01251432000i[CPU0 ] CS.mode = 32 bit
+01251432000i[CPU0 ] SS.mode = 32 bit
+01251432000i[CPU0 ] EFER   = 0x00000000
+01251432000i[CPU0 ] | EAX=00001000  EBX=00000000  ECX=00001000  EDX=00000000
+01251432000i[CPU0 ] | ESP=00002f98  EBP=00000000  ESI=00000000  EDI=00000000
+01251432000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af PF cf
+01251432000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
+01251432000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+01251432000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+01251432000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+01251432000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+01251432000i[CPU0 ] |  FS:0000( 0000| 0|  0) 00000000 00000000 0 0
+01251432000i[CPU0 ] |  GS:0000( 0000| 0|  0) 00000000 00000000 0 0
+01251432000i[CPU0 ] | EIP=0001575c (0001575c)
+01251432000i[CPU0 ] | CR0=0x60000011 CR2=0x00000000
+01251432000i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
+01251432000i[CPU0 ] 0x0001575c>> add esp, 0x00000008 : 81C408000000
+01251432000i[CMOS ] Last time is 1528525694 (Fri Jun  8 23:28:14 2018)
+01251432000i[XGUI ] Exit
+01251432000i[     ] restoring default signal behavior
+01251432000i[CTRL ] quit_sim called with exit code 1

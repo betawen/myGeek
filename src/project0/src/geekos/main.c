@@ -21,7 +21,31 @@
 #include <geekos/timer.h>
 #include <geekos/keyboard.h>
 
+void project0()
+{
+    Print("To Exit hit Ctrl+d.\n");
+	
+	Keycode keycode;
+	while(1)
+	{
+		if(Read_Key(&keycode))	//读取键盘按键状态
+		{
+			if(!( (keycode & KEY_SPECIAL_FLAG) || (keycode & KEY_RELEASE_FLAG)) ) //只处理非特殊按键的按下事件
+			{                
+				int asciiCode = keycode &  0xff;    //低8位为Ascii码
 
+				if( (keycode & KEY_CTRL_FLAG)==KEY_CTRL_FLAG  &&  asciiCode=='d')    //按下Ctrl键
+              			  {
+				Print("\n---------BYE!--------\n");
+				Exit(1);                      
+				}else
+				{
+				Print("%c",(asciiCode=='\r') ? '\n' : asciiCode);
+				}
+			} 
+		}
+	}
+}
 
 
 /*
@@ -48,8 +72,10 @@ void Main(struct Boot_Info* bootInfo)
     Set_Current_Attr(ATTRIB(BLACK, GRAY));
 
 
-    TODO("Start a kernel thread to echo pressed keys and print counts");
+    //TODO("Start a kernel thread to echo pressed keys and print counts");
 
+	struct Kernel_Thread *thread;
+    thread = Start_Kernel_Thread(&project0,0,PRIORITY_NORMAL,false); 
 
 
     /* Now this thread is done. */
